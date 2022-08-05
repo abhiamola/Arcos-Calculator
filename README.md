@@ -18,7 +18,7 @@ java Main
 ```
 
 After running the command this window will show
-![Something went wrong](images/program_window.png)
+![Something went wrong](images/program_window.jpg)
 
 ### To test the code the following steps are usefull
 There are several ways of testing the code :

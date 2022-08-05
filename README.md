@@ -4,22 +4,18 @@
 To compile this code type the following commnad
 at first you need to navigate to the source code using the folloowing command 
 ```
-cd mathlib_project_across\src\main\java
+cd Project-SOEN-6011\src\main\java
 ```
 after the type the below command to get the compiled code
 ```
 javac -g Main.java user_console/*.java exception/*.java util/*.java
 ```
 
-![Something went wrong](images/compile_java.png)
-
 To run the code above compiled program type the command below:
 
 ```
 java Main
 ```
-
-![Something went wrong](images/runproject.png)
 
 After running the command this window will show
 ![Something went wrong](images/program_window.png)

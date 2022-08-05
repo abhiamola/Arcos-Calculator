@@ -32,33 +32,27 @@ public class Display {
         );
         System.out.println("Welcome to arc cos calculator: ");
         while (true) {
-            System.out.println("[1] Calculate arcos");
 
-            System.out.println("Enter your choice :");
-
-            input = scanner.nextInt();
-
-            switch (input) {
-                case 1:
                     Double inputForAcos;
                     Scanner scannerAcos = new Scanner(System.in);
-                    System.out.println("Enter your value to calculate acos: ");
+                    System.out.println("Enter your value to calculate arccos: ");
                     inputForAcos = scannerAcos.nextDouble();
+                    if(inputForAcos>=-1 &&  inputForAcos<=1) {
+                        double result = NewMath.arccos(inputForAcos);
+                        System.out.println("The arccos result of your value (in radian) is : "
+                                + result);
+                        this.askIfRadianToDegreeNeeded(result);
+                    }
+                    else
+                    {
+                        System.out.println("Value out of arccos domain");
+                    }
+                    this.askIfUserWantsToQuit();
 
-                    double result = NewMath.arccos(inputForAcos);
-                    System.out.println("The acos result of your value is : "
-                            + result);
-                    this.askIfRadianToDegreeNeeded(result);
-                    this.askIfUserWantsToQuite();
-
-                    break;
-                default:
-                    break;
-            }
         }
     }
 
-    private void askIfUserWantsToQuite() {
+    private void askIfUserWantsToQuit() {
         String ans;
         Scanner ansScanner = new Scanner(System.in);
 

@@ -36,18 +36,23 @@ public class Display {
                     Double inputForAcos;
                     Scanner scannerAcos = new Scanner(System.in);
                     System.out.println("Enter your value to calculate arccos: ");
-                    inputForAcos = scannerAcos.nextDouble();
-                    if(inputForAcos>=-1 &&  inputForAcos<=1) {
-                        double result = NewMath.arccos(inputForAcos);
-                        System.out.println("The arccos result of your value (in radian) is : "
-                                + result);
-                        this.askIfRadianToDegreeNeeded(result);
-                    }
-                    else
-                    {
-                        System.out.println("Value out of arccos domain");
-                    }
-                    this.askIfUserWantsToQuit();
+                    try{
+						inputForAcos = scannerAcos.nextDouble();
+						if(inputForAcos>=-1 &&  inputForAcos<=1) {
+							double result = NewMath.arccos(inputForAcos);
+							System.out.println("The arccos result of your value (in radian) is : " + result);
+						this.askIfRadianToDegreeNeeded(result);
+						}
+						else
+						{
+							System.out.println("Value out of arccos domain");
+						}
+						this.askIfUserWantsToQuit();
+					}
+					catch (Exception e)
+					{
+						System.out.println("Wrong value type entered");
+					}
 
         }
     }

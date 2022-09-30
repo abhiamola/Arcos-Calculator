@@ -4,7 +4,7 @@
 To compile this code type the following commnad
 at first you need to navigate to the source code using the folloowing command 
 ```
-cd Project-SOEN-6011\src\main\java
+cd Arcos-Calculator\src\main\java
 ```
 after the type the below command to get the compiled code
 ```
